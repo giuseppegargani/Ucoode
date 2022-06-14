@@ -1,0 +1,43 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+    id "com.gradle.plugin-publish"
+}
+
+group 'com.barsali.Ucoode'
+version '0.01'
+
+pluginBundle {
+    website = 'https://github.com/giuseppegargani/greetings_plugin'
+    vcsUrl = 'https://github.com/giuseppegargani/greetings_plugin'
+    tags = ['example', 'try', 'prova', 'tentativo']
+}
+
+gradlePlugin {
+    // Define the plugin
+    plugins {
+        report {
+            id = 'com.barsali.ucoode.report'
+            displayName = 'ucoodereport'
+            description = 'FOR JSON REPORT'
+            implementationClass = 'com.barsali.Ucoode.Ucoodereport'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.7'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
