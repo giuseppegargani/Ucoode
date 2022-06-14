@@ -1,0 +1,100 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.0"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'maven-publish'
+    // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
+    id 'java-gradle-plugin'
+    id "com.gradle.plugin-publish" version "1.0.0-rc-2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+//step 1: creare Jar (di tipo jar)
+task sourceJar(type: Jar) {
+    if(file("$buildDir/../prova.txt").exists()) {println("IL FILE ESISTE")} else {println("il file non esiste")}
+    archiveFileName = "beppe.jar"
+    destinationDirectory = file("$buildDir/..")
+    //anche from multipli!!! ed ognuno con una sua possibile configurazione!!!!!
+    from "$buildDir/../prova.txt"
+    from "$buildDir/../main.yml"
+    //archiveClassifier = "sources"
+}
+
+//step 2: Verifica esistenza file con Layout builddirectory
+task verpath(){
+    doLast {
+        //def customfile = layout.buildDirectory.file("../beppe.jar")
+        def customfile = layout.buildDirectory.dir("./")
+        if(file("$buildDir/../beppe.jar").exists()) { println("IL FILE RICHIESTO ESISTE")}else {println("IL FILE RICHIESTO NON ESISTE")}
+    }
+}
+
+//step 3: assegna ad canfiguration "archives"
+def myRpm = artifacts.add('archives', file("$buildDir/../beppe.jar"))
+
+build.dependsOn(sourceJar)
+publish.dependsOn(sourceJar)
+
+publishing {
+    publications {
+        pub(MavenPublication) {
+            artifact myRpm
+            //artifact sourceJar
+            //artifact rpmArtifact
+            artifactId "documenti"
+            //from components.java
+
+            /*pom {
+                name = 'My Library'
+                description = 'A concise description of my library'
+                url = 'http://www.example.com/library'
+                properties = [
+                        myProp: "value",
+                        "prop.with.dots": "anotherValue"
+                ]
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'johnd'
+                        name = 'John Doe'
+                        email = 'john.doe@example.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://example.com/my-library.git'
+                    developerConnection = 'scm:git:ssh://example.com/my-library.git'
+                    url = 'http://example.com/my-library/'
+                }
+            }*/
+            groupId 'com.github.giuseppegargani'
+            version '0.15'
+
+
+            repositories {
+                maven {
+                    url = 'https://jitpack.io'
+                }
+            }
+        }
+    }
+}
