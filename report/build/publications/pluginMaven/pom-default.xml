@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.barsali.ucoode</groupId>
   <artifactId>report</artifactId>
-  <version>0.04</version>
+  <version>0.06</version>
   <dependencies>
     <dependency>
       <groupId>org.codehaus.groovy</groupId>

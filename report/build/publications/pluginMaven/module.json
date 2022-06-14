@@ -3,7 +3,7 @@
   "component": {
     "group": "com.barsali.ucoode",
     "module": "report",
-    "version": "0.04",
+    "version": "0.06",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -25,13 +25,13 @@
       },
       "files": [
         {
-          "name": "report-0.04.jar",
-          "url": "report-0.04.jar",
-          "size": 44572,
-          "sha512": "d8302b2a46aa033dca9746245bf66727f3491e5a7dbc8d2e40629b6bad001002e08926de6a0ab9f8ad72117a29d698c55c96819db35f3134aadafea5fc8bf1d6",
-          "sha256": "e4a396486d7a86f1f2b7e7878bbd366a58e407e421fb8f9d36fd586edcc610e5",
-          "sha1": "9c5902556681d4b3f486fd1dbd7faee47e9cb494",
-          "md5": "fc951e15d4b83ddc2e2121ebe27770fb"
+          "name": "report-0.06.jar",
+          "url": "report-0.06.jar",
+          "size": 45252,
+          "sha512": "f01a6fade8303db38eed2e834e1f9d4f8444f3b5e28bbcab1c2f8338f83fc0c4b3d0d3169b1d7e2cc22d0dd683f87f291c17cb5e66fef0e439b2111996a213d3",
+          "sha256": "2c7fc3d742c55d9ba1509183e5ee15ece581b36b24a40f4bc6397f312789b48f",
+          "sha1": "8e174c49bec7048cc279546fa5360a2194c2fac8",
+          "md5": "79f77ee436b92c2a5891b3a1259a61d2"
         }
       ]
     },
@@ -55,13 +55,13 @@
       ],
       "files": [
         {
-          "name": "report-0.04.jar",
-          "url": "report-0.04.jar",
-          "size": 44572,
-          "sha512": "d8302b2a46aa033dca9746245bf66727f3491e5a7dbc8d2e40629b6bad001002e08926de6a0ab9f8ad72117a29d698c55c96819db35f3134aadafea5fc8bf1d6",
-          "sha256": "e4a396486d7a86f1f2b7e7878bbd366a58e407e421fb8f9d36fd586edcc610e5",
-          "sha1": "9c5902556681d4b3f486fd1dbd7faee47e9cb494",
-          "md5": "fc951e15d4b83ddc2e2121ebe27770fb"
+          "name": "report-0.06.jar",
+          "url": "report-0.06.jar",
+          "size": 45252,
+          "sha512": "f01a6fade8303db38eed2e834e1f9d4f8444f3b5e28bbcab1c2f8338f83fc0c4b3d0d3169b1d7e2cc22d0dd683f87f291c17cb5e66fef0e439b2111996a213d3",
+          "sha256": "2c7fc3d742c55d9ba1509183e5ee15ece581b36b24a40f4bc6397f312789b48f",
+          "sha1": "8e174c49bec7048cc279546fa5360a2194c2fac8",
+          "md5": "79f77ee436b92c2a5891b3a1259a61d2"
         }
       ]
     },
@@ -75,13 +75,13 @@
       },
       "files": [
         {
-          "name": "report-0.04-javadoc.jar",
-          "url": "report-0.04-javadoc.jar",
+          "name": "report-0.06-javadoc.jar",
+          "url": "report-0.06-javadoc.jar",
           "size": 261,
-          "sha512": "a0ef8aa83b68b873ee3e7b6b2f1acaaa4683f3ce832d7792435f240fddaee303c0bdc286622119951699c1499ab3f42edd5f6bdfd97d42d84184c744fbbe4fbb",
-          "sha256": "047d7e69620ea599b0f2950c0fe444030fb134d9eb5d2a040be7baec188d3546",
-          "sha1": "5bd1d31c46310d59447ddde75aa2c3bfb730d80e",
-          "md5": "4de6ccc9a57536bf1ac0f2a6b5ff91f9"
+          "sha512": "3857e4f0c0b067bb7bd69edb827a08227e02e454a656d94cefac67cbe40589b1a5f85a22620a79bc31440674edd9df2bcc051251dc04b0d7a467ac466635ff12",
+          "sha256": "dd9a42767f614f15d59aa1e477fbe158e46541407add2e561a08b940c4aadbc6",
+          "sha1": "310c05c726d3c035aa0a8b6690c06dbdb76c5568",
+          "md5": "f83de2ba2b430b956309830e920a489d"
         }
       ]
     },
@@ -95,13 +95,13 @@
       },
       "files": [
         {
-          "name": "report-0.04-sources.jar",
-          "url": "report-0.04-sources.jar",
-          "size": 3537,
-          "sha512": "a5b7c4023cefccb9de69e2e29b24bb57caa554feb16d402667e17051aa68f0ec964a39db06b3598c5e51a55952c9d4e8bfe29554866714828215e93caa210865",
-          "sha256": "cd31f9fb5007749ba9e00f4dedb57c297a734ec1f93a456b7788797761f7f8e8",
-          "sha1": "8353847e333595677debe33e755435a25c5f912a",
-          "md5": "8b8a4f5789cbbbfd2ed2ed11d0093b57"
+          "name": "report-0.06-sources.jar",
+          "url": "report-0.06-sources.jar",
+          "size": 3573,
+          "sha512": "5565bfd3d94232dbab01ecc90e25346f4f731b244c28e29de7be9377b12b593c46ace4ece2b85aa9e853a2c8eacec750532b47da6c8ba1bd11fc724fdc85adaa",
+          "sha256": "236194ecf42106606d975618e145c6b75bb4d6098ffbe7dbd55cde6fca669378",
+          "sha1": "2c7c9014f5555fa945cce15606e2ad249d92730d",
+          "md5": "80d7fd092df966d8547ce663c8b253c5"
         }
       ]
     }

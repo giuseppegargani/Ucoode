@@ -7,8 +7,8 @@ plugins {
     id "com.gradle.plugin-publish"
 }
 
-group 'com.github.giuseppegargani'
-version '0.05'
+group 'com.barsali.ucoode'
+version '0.06'
 
 pluginBundle {
     website = 'https://github.com/giuseppegargani/greetings_plugin'
@@ -20,7 +20,7 @@ gradlePlugin {
     // Define the plugin
     plugins {
         report {
-            id = 'com.github.giuseppegargani.report'
+            id = 'com.barsali.ucoode.report'
             displayName = 'ucoodereport'
             description = 'FOR JSON REPORT'
             implementationClass = 'com.github.giuseppegargani.Ucoodereport'
