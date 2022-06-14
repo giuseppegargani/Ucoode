@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.barsali.ucoode.report</groupId>
+  <artifactId>com.barsali.ucoode.report.gradle.plugin</artifactId>
+  <version>0.04</version>
+  <packaging>pom</packaging>
+  <name>ucoodereport</name>
+  <description>FOR JSON REPORT</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.barsali.ucoode</groupId>
+      <artifactId>report</artifactId>
+      <version>0.04</version>
+    </dependency>
+  </dependencies>
+</project>
