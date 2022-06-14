@@ -1,6 +1,5 @@
 import org.gradle.api.initialization.resolve.RepositoriesMode
 
-//forse bisogna metterli qui
 
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
