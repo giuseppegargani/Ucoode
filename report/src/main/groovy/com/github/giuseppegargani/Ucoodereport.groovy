@@ -9,7 +9,7 @@ class Ucoodereport implements Plugin<Project> {
     void apply(Project project) {
         project.android {
 
-            testVariants.all { variant ->
+            /*testVariants.all { variant ->
                 variant.connectedInstrumentTest.doLast {
                     println "The name of the test type: $connectedInstrumentTest.name"
                     println "The type of test $connectedInstrumentTest.class"
@@ -17,9 +17,9 @@ class Ucoodereport implements Plugin<Project> {
                 //SI DEVE TOGLIERE COME HARDCODED e mettere project
                 project.connectedAndroidTest.finalizedBy(':app:ucoodeTest')
                 project.assembleDebugAndroidTest.finalizedBy(':app:ucoodeTest')
-            }
+            }*/
 
-            testOptions {
+            /*testOptions {
 
                 execution 'ANDROIDX_TEST_ORCHESTRATOR'
 
@@ -82,7 +82,7 @@ class Ucoodereport implements Plugin<Project> {
                         logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
                     }
                 }
-            }
+            }*/
         }
 
         /*project.task('hello') {

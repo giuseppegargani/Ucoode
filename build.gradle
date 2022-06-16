@@ -87,7 +87,7 @@ publishing {
                     url = 'http://example.com/my-library/'
                 }
             }*/
-            groupId 'com.github.giuseppegargani'
+            groupId 'com.barsali.ucoode'
             version '0.15'
 
 
