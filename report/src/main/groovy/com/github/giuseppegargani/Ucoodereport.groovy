@@ -19,11 +19,11 @@ class Ucoodereport implements Plugin<Project> {
                 project.assembleDebugAndroidTest.finalizedBy(':app:ucoodeTest')
             }
 
-            /*testOptions {
+            testOptions {
 
                 execution 'ANDROIDX_TEST_ORCHESTRATOR'
 
-                unitTests.all {
+                /*unitTests.all {
 
                     def testResults = []
                     def intermedi = []
@@ -81,8 +81,8 @@ class Ucoodereport implements Plugin<Project> {
                     onOutput { descriptor, event ->
                         logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
                     }
-                }
-            }*/
+                }*/
+            }
         }
 
         /*project.task('hello') {
