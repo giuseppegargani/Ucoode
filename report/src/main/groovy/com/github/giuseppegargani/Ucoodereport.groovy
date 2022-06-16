@@ -19,7 +19,7 @@ class Ucoodereport implements Plugin<Project> {
                 project.assembleDebugAndroidTest.finalizedBy(':app:ucoodeTest')
             }
 
-            project.testOptions {
+            testOptions {
 
                 //execution 'ANDROIDX_TEST_ORCHESTRATOR'
 
