@@ -9,15 +9,15 @@ class Ucoodereport implements Plugin<Project> {
     void apply(Project project) {
         project.android {
 
-            /*testVariants.all { variant ->
+            testVariants.all { variant ->
                 variant.connectedInstrumentTest.doLast {
-                    println "The name of the test type: $connectedInstrumentTest.name"
-                    println "The type of test $connectedInstrumentTest.class"
+                   /* println "The name of the test type: $connectedInstrumentTest.name"
+                    println "The type of test $connectedInstrumentTest.class"*/
                 }
                 //SI DEVE TOGLIERE COME HARDCODED e mettere project
                 project.connectedAndroidTest.finalizedBy(':app:ucoodeTest')
                 project.assembleDebugAndroidTest.finalizedBy(':app:ucoodeTest')
-            }*/
+            }
 
             /*testOptions {
 
