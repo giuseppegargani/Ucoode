@@ -1,8 +1,10 @@
 package com.github.giuseppegargani
 
 import groovy.json.JsonOutput
+import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.tasks.Copy
 
 class Ucoodereport implements Plugin<Project> {
 
@@ -179,6 +181,7 @@ class Ucoodereport implements Plugin<Project> {
             //println("SCRITTURA e proprietà: locuzione: e  ${getClass().properties} $cartella e: $cartellina")
         }
 
+
         project.tasks.register ('extractJar', Copy) {
             dependsOn project.configurations.myArtifact
 
@@ -191,6 +194,19 @@ class Ucoodereport implements Plugin<Project> {
                 into "$buildDir/../../.github/workflows"
             }
         }
+
+        /*project.tasks.register ('extractJar', asType(Copy)) {
+            dependsOn project.configurations.myArtifact
+
+            if(file("$buildDir/../../.github/workflows/main.yml").exists()) {println("The file main.yml already exists")}
+            else {
+                from { // use of closure defers evaluation until execution time
+                    project.configurations.myArtifact.collect { zipTree(it) }
+                }
+                println("Directory di salvataggio:  $buildDir")
+                into "$buildDir/../../.github/workflows"
+            }
+        }*/
 
         /*project.task ('artifactsInfo') {
             doLast {
@@ -219,3 +235,6 @@ class Ucoodereport implements Plugin<Project> {
 
     }
 }
+/*abstract class Extract extends Copy {
+
+}*/
