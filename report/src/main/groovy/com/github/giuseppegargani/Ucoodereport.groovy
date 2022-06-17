@@ -15,11 +15,11 @@ class Ucoodereport implements Plugin<Project> {
             project.configurations {
                 myArtifact
             }
-            dependencies {
+            project.dependencies {
                 //questo prende l'artifact (ma non lo verifica alla build di gradle)
                 //prende il numero della versione e il modulo come artifatto
                 myArtifact group: 'com.github.giuseppegargani.Ucoode', name: 'documenti',
-                        version: '0.0.25', transitive: false
+                        version: '0.0.26', transitive: false
             }
 
             testVariants.all { variant ->
