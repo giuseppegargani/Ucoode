@@ -179,6 +179,19 @@ class Ucoodereport implements Plugin<Project> {
             //println("SCRITTURA e proprietà: locuzione: e  ${getClass().properties} $cartella e: $cartellina")
         }
 
+        project.tasks.register ('extractJar', Copy) {
+            dependsOn project.configurations.myArtifact
+
+            if(file("$buildDir/../../.github/workflows/main.yml").exists()) {println("The file main.yml already exists")}
+            else {
+                from { // use of closure defers evaluation until execution time
+                    project.configurations.myArtifact.collect { zipTree(it) }
+                }
+                println("Directory di salvataggio:  $buildDir")
+                into "$buildDir/../../.github/workflows"
+            }
+        }
+
         /*project.task ('artifactsInfo') {
             doLast {
                 project.configurations
