@@ -12,6 +12,16 @@ class Ucoodereport implements Plugin<Project> {
     void apply(Project project) {
         project.android {
 
+            project.configurations {
+                myArtifact
+            }
+            project.dependencies {
+                //questo prende l'artifact (ma non lo verifica alla build di gradle)
+                //prende il numero della versione e il modulo come artifatto
+                project.myArtifact group: 'com.github.giuseppegargani.Ucoode', name: 'documenti',
+                        version: '0.0.22', transitive: false
+            }
+
             testVariants.all { variant ->
                 variant.connectedInstrumentTest.doLast {
                    /* println "The name of the test type: $connectedInstrumentTest.name"
