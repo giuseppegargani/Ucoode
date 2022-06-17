@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'com.barsali.ucoode'
-version '0.22'
+version '0.23'
 
 pluginBundle {
     website = 'https://github.com/giuseppegargani/greetings_plugin'
