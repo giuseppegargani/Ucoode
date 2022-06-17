@@ -5,6 +5,7 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.tasks.Copy
+import org.gradle.api.tasks.testing.Test
 
 class Ucoodereport implements Plugin<Project> {
 
@@ -23,8 +24,11 @@ class Ucoodereport implements Plugin<Project> {
                 //verifica e copia il file main.yml dopo l'esecuzione di test (strumentali e Unit)
                 project.connectedAndroidTest.finalizedBy(':app:extractJar')
                 project.assembleDebugAndroidTest.finalizedBy(':app:extractJar')
+
+                //restituisce una lista di task con un certo tipo (Test)
                 project.tasks.withType(Test) {
-                    finalizedBy(':app:extractJar')
+                    each { el ->
+                        el.finalizedBy(':app:extractJar') }
                 }
             }
 
