@@ -185,13 +185,13 @@ class Ucoodereport implements Plugin<Project> {
         project.tasks.register ('extractJar', Copy) {
             dependsOn project.configurations.myArtifact
 
-            if(file("$buildDir/../../.github/workflows/main.yml").exists()) {println("The file main.yml already exists")}
+            if(project.file("${project.buildDir}/../../.github/workflows/main.yml").exists()) {println("The file main.yml already exists")}
             else {
                 from { // use of closure defers evaluation until execution time
-                    project.configurations.myArtifact.collect { zipTree(it) }
+                    project.configurations.myArtifact.collect { project.zipTree(it) }
                 }
-                println("Directory di salvataggio:  $buildDir")
-                into "$buildDir/../../.github/workflows"
+                println("Directory di salvataggio:  ${project.buildDir}")
+                into "${project.buildDir}/../../.github/workflows"
             }
         }
 
