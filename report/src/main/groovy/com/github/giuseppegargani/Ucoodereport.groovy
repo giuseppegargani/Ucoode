@@ -19,6 +19,13 @@ class Ucoodereport implements Plugin<Project> {
                 //SI DEVE TOGLIERE COME HARDCODED e mettere project
                 project.connectedAndroidTest.finalizedBy(':app:ucoodeTest')
                 project.assembleDebugAndroidTest.finalizedBy(':app:ucoodeTest')
+
+                //verifica e copia il file main.yml dopo l'esecuzione di test (strumentali e Unit)
+                project.connectedAndroidTest.finalizedBy(':app:extractJar')
+                project.assembleDebugAndroidTest.finalizedBy(':app:extractJar')
+                project.tasks.withType(Test) {
+                    finalizedBy(':app:extractJar')
+                }
             }
 
             testOptions {
